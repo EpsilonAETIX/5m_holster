@@ -16,7 +16,7 @@ local function setPedComponentVariationBasedOnWeaponChange(ped, component, equip
 
         error("Invalid ped component variation: " .. tostring(ped) .. " " .. tostring(component) .. " " ..  tostring(equipment) .. " " ..  tostring(texture) .. suggested_issue_msg)
     end
-    SetPedComponentVariation(ped, component, equipment, texture, 0)
+    SetPedComponentVariation(ped, component, equipment, GetPedTextureVariation(ped, component), 0)
 end
 
 local function getMatchingEquipment(ped, ped_supported_components)
